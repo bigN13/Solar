@@ -12,5 +12,9 @@ namespace SolarMovie
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            AppDomain.CurrentDomain.SetData("DataDirectory", Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData));
+        }
     }
 }
